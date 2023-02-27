@@ -1,0 +1,61 @@
+# depslib dependency file v1.0
+1677344629 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\main.c
+	"common.h"
+	"chunk.h"
+	"debug.h"
+	"decompress.h"
+	"vm.h"
+
+1676995291 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\common.h
+	<stdbool.h>
+	<stddef.h>
+	<stdint.h>
+
+1677529536 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\chunk.h
+	"common.h"
+	"value.h"
+
+1677277850 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\debug.h
+	"chunk.h"
+
+1677344462 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\chunk.c
+	<stdlib.h>
+	"chunk.h"
+	"memory.h"
+
+1677023822 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\memory.h
+	"common.h"
+
+1677023822 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\memory.c
+	<stdlib.h>
+	"memory.h"
+
+1677163544 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\value.h
+	"common.h"
+
+1677344629 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\debug.c
+	<stdio.h>
+	"debug.h"
+	"value.h"
+
+1677163544 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\value.c
+	<stdio.h>
+	"memory.h"
+	"value.h"
+
+1677271529 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\getline.h
+
+1677344462 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\decompress.h
+	"debug.h"
+
+1677344853 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\decompress.c
+	"chunk.h"
+
+1677344462 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\vm.h
+	"chunk.h"
+
+1677344462 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\vm.c
+	<stdio.h>
+	"common.h"
+	"vm.h"
+
