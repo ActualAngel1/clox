@@ -15,7 +15,7 @@ void initVM() {
 
 void freeVM() {
 }
-
+#define DEBUG_TRACE_EXECUTION
 void push(Value value) {
   *vm.stackTop = value;
   vm.stackTop++;
@@ -38,22 +38,22 @@ static InterpretResult run() {
 
   for (;;) {
       #ifdef DEBUG_TRACE_EXECUTION
-              printf("          ");
+        printf("          ");
         for (Value* slot = vm.stack; slot < vm.stackTop; slot++) {
           printf("[ ");
           printValue(*slot);
           printf(" ]");
         }
         printf("\n");
-         int newArr[vm.chunk.count];
-         int temp = vm.chunk.lines;
-         for(int m = 1 ; m < chunk.count+1; m ++ ){
-              newArr[m-1] = getLine(m, chunk.lines);
+         int newArr[vm.chunk->count];
+         int* temp = vm.chunk->lines;
+         for(int m = 1 ; m < (vm.chunk->count)+1; m ++ ){
+             newArr[m-1] = getLine(m, vm.chunk->lines);
         }
-        vm.chunk.lines = newArr;
+        vm.chunk->lines = newArr;
       disassembleInstruction(vm.chunk,
                              (int)(vm.ip - vm.chunk->code));
-        vm.chunk.lines = temp;
+        vm.chunk->lines = temp;
       #endif
     uint8_t instruction;
     switch (instruction = READ_BYTE()) {
@@ -66,7 +66,7 @@ static InterpretResult run() {
       case OP_SUBTRACT: BINARY_OP(-); break;
       case OP_MULTIPLY: BINARY_OP(*); break;
       case OP_DIVIDE:   BINARY_OP(/); break;
-      case OP_NEGATE:   push(-pop()); break;
+      case OP_NEGATE:   *(vm.stackTop-1)=-*(vm.stackTop-1); break;
       case OP_RETURN: {
         printValue(pop());
         printf("\n");

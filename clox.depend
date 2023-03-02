@@ -59,3 +59,62 @@
 	"common.h"
 	"vm.h"
 
+1677344462 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\chunk.c
+	<stdlib.h>
+	"chunk.h"
+	"memory.h"
+
+1677535135 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\chunk.h
+	"common.h"
+	"value.h"
+
+1676995291 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\common.h
+	<stdbool.h>
+	<stddef.h>
+	<stdint.h>
+
+1677163544 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\value.h
+	"common.h"
+
+1677023822 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\memory.h
+	"common.h"
+
+1677537222 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\debug.c
+	<stdio.h>
+	"debug.h"
+	"value.h"
+
+1677277850 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\debug.h
+	"chunk.h"
+
+1677344853 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\decompress.c
+	"chunk.h"
+
+1677790393 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\main.c
+	"common.h"
+	"chunk.h"
+	"debug.h"
+	"decompress.h"
+	"vm.h"
+
+1677344462 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\decompress.h
+	"debug.h"
+
+1677529536 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\vm.h
+	"chunk.h"
+	"value.h"
+
+1677023822 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\memory.c
+	<stdlib.h>
+	"memory.h"
+
+1677163544 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\value.c
+	<stdio.h>
+	"memory.h"
+	"value.h"
+
+1677538774 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\vm.c
+	<stdio.h>
+	"common.h"
+	"vm.h"
+
