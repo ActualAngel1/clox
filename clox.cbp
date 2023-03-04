@@ -41,10 +41,10 @@
 		<Unit filename="common.h" />
 		<Unit filename="compiler.c">
 			<Option compilerVar="CC" />
-			<Option target="&lt;{~None~}&gt;" />
+			<Option target="Debug" />
 		</Unit>
 		<Unit filename="compiler.h">
-			<Option target="&lt;{~None~}&gt;" />
+			<Option target="Debug" />
 		</Unit>
 		<Unit filename="debug.c">
 			<Option compilerVar="CC" />
@@ -72,10 +72,10 @@
 		</Unit>
 		<Unit filename="scanner.c">
 			<Option compilerVar="CC" />
-			<Option target="&lt;{~None~}&gt;" />
+			<Option target="Debug" />
 		</Unit>
 		<Unit filename="scanner.h">
-			<Option target="&lt;{~None~}&gt;" />
+			<Option target="Debug" />
 		</Unit>
 		<Unit filename="value.c">
 			<Option compilerVar="CC" />

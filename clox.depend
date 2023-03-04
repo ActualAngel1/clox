@@ -90,7 +90,10 @@
 1677344853 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\decompress.c
 	"chunk.h"
 
-1677790393 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\main.c
+1677926215 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
 	"common.h"
 	"chunk.h"
 	"debug.h"
@@ -100,7 +103,7 @@
 1677344462 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\decompress.h
 	"debug.h"
 
-1677529536 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\vm.h
+1677922919 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\vm.h
 	"chunk.h"
 	"value.h"
 
@@ -113,8 +116,19 @@
 	"memory.h"
 	"value.h"
 
-1677538774 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\vm.c
+1677922919 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\vm.c
 	<stdio.h>
 	"common.h"
+	"compiler.h"
 	"vm.h"
+
+1677926199 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\compiler.h
+
+1677926264 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\compiler.c
+	<stdio.h>
+	"common.h"
+	"compiler.h"
+	"scanner.h"
+
+1677926199 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\scanner.h
 
