@@ -64,22 +64,22 @@
 	"chunk.h"
 	"memory.h"
 
-1677535135 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\chunk.h
+1679251086 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\chunk.h
 	"common.h"
 	"value.h"
 
-1676995291 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\common.h
+1678198996 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\common.h
 	<stdbool.h>
 	<stddef.h>
 	<stdint.h>
 
-1677163544 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\value.h
+1679251086 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\value.h
 	"common.h"
 
 1677023822 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\memory.h
 	"common.h"
 
-1677537222 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\debug.c
+1679251086 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\debug.c
 	<stdio.h>
 	"debug.h"
 	"value.h"
@@ -111,24 +111,34 @@
 	<stdlib.h>
 	"memory.h"
 
-1677163544 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\value.c
+1679251086 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\value.c
 	<stdio.h>
 	"memory.h"
 	"value.h"
 
-1677922919 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\vm.c
+1679251258 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\vm.c
+	<stdarg.h>
 	<stdio.h>
 	"common.h"
 	"compiler.h"
 	"vm.h"
 
-1677926199 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\compiler.h
+1678198309 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\compiler.h
+	"vm.h"
 
-1677926264 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\compiler.c
+1679251086 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\compiler.c
 	<stdio.h>
+	<stdlib.h>
 	"common.h"
 	"compiler.h"
 	"scanner.h"
+	"debug.h"
 
-1677926199 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\scanner.h
+1677959725 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\scanner.h
+
+1677926302 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\scanner.c
+	<stdio.h>
+	<string.h>
+	"common.h"
+	"scanner.h"
 
