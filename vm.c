@@ -1,8 +1,12 @@
 #include <stdarg.h>
 #include <stdio.h>
+#include <string.h>
 
 #include "common.h"
 #include "compiler.h"
+#include "debug.h"
+#include "object.h"
+#include "memory.h"
 #include "vm.h"
 
 VM vm;
@@ -26,9 +30,11 @@ static void runtimeError(const char* format, ...) {
 
 void initVM() {
   resetStack();
+  vm.objects = NULL;
 }
 
 void freeVM() {
+  freeObjects();
 }
 #define DEBUG_TRACE_EXECUTION
 void push(Value value) {
@@ -47,6 +53,20 @@ static Value peek(int distance) {
 
 static bool isFalsey(Value value) {
   return IS_NIL(value) || (IS_BOOL(value) && !AS_BOOL(value));
+}
+
+static void concatenate() {
+  ObjString* b = AS_STRING(pop());
+  ObjString* a = AS_STRING(pop());
+
+  int length = a->length + b->length;
+  char* chars = ALLOCATE(char, length + 1);
+  memcpy(chars, a->chars, a->length);
+  memcpy(chars + a->length, b->chars, b->length);
+  chars[length] = '\0';
+
+  ObjString* result = takeString(chars, length);
+  push(OBJ_VAL(result));
 }
 
 static InterpretResult run() {
@@ -92,7 +112,19 @@ static InterpretResult run() {
 
       case OP_GREATER:  BINARY_OP(BOOL_VAL, >); break;
       case OP_LESS:     BINARY_OP(BOOL_VAL, <); break;
-      case OP_ADD:     BINARY_OP(NUMBER_VAL, +); break;
+      case OP_ADD: {
+        if (IS_STRING(peek(0)) && IS_STRING(peek(1))) {
+          concatenate();
+        } else if (IS_NUMBER(peek(0)) && IS_NUMBER(peek(1))) {
+          double b = AS_NUMBER(pop());
+          double a = AS_NUMBER(pop());
+          push(NUMBER_VAL(a + b));
+        } else {
+          runtimeError(
+              "Operands must be two numbers or two strings.");
+          return INTERPRET_RUNTIME_ERROR;
+        }
+        break;
       case OP_NIL:     push(NIL_VAL); break;
       case OP_TRUE:    push(BOOL_VAL(true)); break;
       case OP_FALSE:   push(BOOL_VAL(false)); break;
@@ -127,6 +159,7 @@ static InterpretResult run() {
 #undef READ_BYTE
 #undef READ_CONSTANT
 #undef BINARY_OP
+  }
 }
 
 InterpretResult interpret(const char* source) {
@@ -146,3 +179,4 @@ InterpretResult interpret(const char* source) {
   freeChunk(&chunk);
   return result;
 }
+
