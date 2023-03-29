@@ -65,10 +65,10 @@
 		<Unit filename="scanner.h" />
 		<Unit filename="table.c">
 			<Option compilerVar="CC" />
-			<Option target="&lt;{~None~}&gt;" />
+			<Option target="Debug" />
 		</Unit>
 		<Unit filename="table.h">
-			<Option target="&lt;{~None~}&gt;" />
+			<Option target="Debug" />
 		</Unit>
 		<Unit filename="value.c">
 			<Option compilerVar="CC" />
