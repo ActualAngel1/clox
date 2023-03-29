@@ -110,11 +110,11 @@
 	"chunk.h"
 	"memory.h"
 
-1680051014 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\chunk.h
+1680133744 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\chunk.h
 	"common.h"
 	"value.h"
 
-1678202596 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\common.h
+1680133744 c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\common.h
 	<stdbool.h>
 	<stddef.h>
 	<stdint.h>
@@ -130,7 +130,7 @@
 	"common.h"
 	"value.h"
 
-1680051014 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\debug.c
+1680133744 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\debug.c
 	<stdio.h>
 	"debug.h"
 	"value.h"
@@ -204,7 +204,7 @@
 	"memory.h"
 	"value.h"
 
-1680051014 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\vm.c
+1680133744 source:c:\users\socra\onedrive\שולחן העבודה\cprojects\clox\clox\vm.c
 	<stdarg.h>
 	<stdio.h>
 	<string.h>
