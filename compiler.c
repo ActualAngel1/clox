@@ -9,6 +9,10 @@
 #include "debug.h"
 #endif
 
+static uint8_t identifierConstant(Token* name);
+static uint8_t parseVariable(const char* errorMessage);
+static void defineVariable(uint8_t global);
+
 
 typedef struct {
   Token current;
