@@ -48,6 +48,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="decompress.h" />
+		<Unit filename="input.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
