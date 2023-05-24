@@ -6,6 +6,12 @@
 #include "compiler.h"
 #include "scanner.h"
 
+#define PRINT_TO_FILE
+
+#ifdef PRINT_TO_FILE
+#include "output_file.h"
+#endif
+
 #ifdef DEBUG_PRINT_CODE
 #include "debug.h"
 #endif
@@ -216,6 +222,13 @@ static ObjFunction* endCompiler() {
 #ifdef DEBUG_PRINT_CODE
   if (!parser.hadError) {
     disassembleChunk(currentChunk(), function->name != NULL
+        ? function->name->chars : "<script>");
+  }
+#endif
+
+#ifdef PRINT_TO_FILE
+  if (!parser.hadError) {
+    writeToFile(currentChunk(), function->name != NULL
         ? function->name->chars : "<script>");
   }
 #endif
